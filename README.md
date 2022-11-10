@@ -22,6 +22,21 @@
 
 
 ### Create the Github Repo that you’re going to deploy from ###
-> But before you can configure a GitHub action, you need to create a GitHub repo for the Lambda. <p>This is <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo?tool=cli" title="Github repo ">
- how to create a Github repo</a>
- </p>
+* But before you can configure a GitHub action, you need to create a GitHub repo for the Lambda. <p>This is <a href="https://docs.github.com/en/get-started/quickstart/create-a-repo?tool=cli" title="Github repo ">
+ how to create a Github repo</a> </p>
+
+* Then create a new node project (and push the code to the Github repo when you’re done).<p> 1. mkdir my-function <br/> 2. cd my-function <br/> 3. npm init -y <br/> <p> All you need for now is one JS-file in this repo: index.js. You can use the code generated for your Lambda but make some minor changes so you can see that the code actually changes when you deploy it. This is my suggestion, feel free to copy/paste it: <br/>
+</p> </p><p>Here is an example of AppleScript:</p>
+
+<pre><code>exports.handler = async (event) => {
+  const response = {
+    statusCode: 200,
+    body: JSON.stringify("Hello from Lambda and Github!"),
+  };
+  return response;
+};
+</code></pre>
+<p> This code will always send a JSON response containing a string with a nice message.</p>
+
+
+### <p> N.B. You can later easily extend this app with NPM-dependencies because you have initialized it as an NPM app containing a package.json file.</p> ###
